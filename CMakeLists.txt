@@ -106,6 +106,7 @@ install(DIRECTORY include/ DESTINATION include)
 # # build app train_cnn
 add_subdirectory(apps/train_cnn)
 add_subdirectory(apps/simple_inference)
+add_subdirectory(apps/torch_app)
 
 # # build test
 add_subdirectory(tests)
