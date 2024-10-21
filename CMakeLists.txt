@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 project(HDDT)
 enable_language(CXX)
-enable_language(CUDA)
-
 
 # # cmake modules
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
@@ -41,6 +39,7 @@ if(ROCM_FOUND)
     install(TARGETS my_rocm_shared DESTINATION lib)
 
 elseif(CUDA_FOUND)
+    enable_language(CUDA)
     # set(CUDA_SOURCES src/*/cuda/*.cu)
     file(GLOB_RECURSE CUDA_SOURCES "src/*/cuda/*.cu")
 
